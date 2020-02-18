@@ -39,6 +39,7 @@ export const featureReducer = (state = initialState, action) => {
           ...state.additionalFeatures.filter(item => item !== action.payload)
         ]
       };
+
     case "REMOVE_FEATURE":
       console.log("Removed this Feature:", action.payload);
       return {

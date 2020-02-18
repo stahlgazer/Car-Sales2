@@ -1,3 +1,5 @@
+//dispatch actions here to add and remove an item/feature.
+
 export const addFeature = feature => {
   return { type: "ADD_FEATURE", payload: feature };
 };

@@ -8,7 +8,7 @@ import { Provider } from "react-redux";
 import {featureReducer} from "./reducers";
 
 const store = createStore(featureReducer);
-console.log(store.getState());
+console.log('store state in index.js', store.getState());
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(

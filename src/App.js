@@ -49,6 +49,7 @@ const App = props => {
   );
 };
 
+// MAPPING STORE STATE TO PROPS
 const mapStateToProps = state => {
   return {
     additionalPrice: state.additionalPrice,
@@ -57,4 +58,5 @@ const mapStateToProps = state => {
   };
 };
 
+// CONNECTING APP.JS TO OUR STORE
 export default connect(mapStateToProps, {})(App);

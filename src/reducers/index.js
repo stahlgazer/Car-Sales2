@@ -1,3 +1,4 @@
+// INITIAL STATE TAKEN FROM APP.JS
 export const initialState = {
   additionalPrice: 0,
   car: {
@@ -15,6 +16,7 @@ export const initialState = {
   ]
 };
 
+// REDUCER LOGIC FOR ADD_FEATURE AND REMOVE_FEATURE
 export const featureReducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_FEATURE":
@@ -35,6 +37,26 @@ export const featureReducer = (state = initialState, action) => {
         },
         additionalFeatures: [
           ...state.additionalFeatures.filter(item => item !== action.payload)
+        ]
+      };
+    case "REMOVE_FEATURE":
+      console.log("Removed this Feature:", action.payload);
+      return {
+        ...state,
+        additionalPrice: state.additionalPrice - action.payload.price,
+        car: {
+          ...state.car,
+          features: [
+            ...state.car.features.filter(item => item !== action.payload)
+          ]
+        },
+        additionalFeatures: [
+          ...state.additionalFeatures,
+          {
+            id: action.payload.id,
+            name: action.payload.name,
+            price: action.payload.price
+          }
         ]
       };
     default:

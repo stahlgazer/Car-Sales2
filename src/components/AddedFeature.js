@@ -19,4 +19,5 @@ const AddedFeature = props => {
   );
 };
 
+// CONNECTING ADDEDFEATURE.JS TO OUR STORE AND removeFeature ACTION
 export default connect(null, { removeFeature })(AddedFeature);

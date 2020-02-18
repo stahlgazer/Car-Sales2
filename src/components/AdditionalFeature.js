@@ -19,4 +19,5 @@ const AdditionalFeature = props => {
   );
 };
 
+// CONNECTING ADDITIONALFEATURE.JS TO OUR STORE AND addFeature ACTION
 export default connect(null, { addFeature })(AdditionalFeature);
